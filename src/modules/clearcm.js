@@ -23,6 +23,4 @@ export const clearAllTask = () => {
   task.push(...newArr);
   localStorage.setItem('task', JSON.stringify(task));
 
-  //  const checked = document.querySelectorAll('.input-check');
-  //  console.log(checked);
 };
