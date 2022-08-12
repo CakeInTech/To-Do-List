@@ -1,3 +1,4 @@
+import { remove } from 'lodash';
 import { clear, clearAllTask } from './clearcm.js';
 
 const addBtn = document.querySelector('.submit');
@@ -34,38 +35,40 @@ addBtn.addEventListener('click', (e) => {
   const obj = {
     description: input,
     completed: false,
-    index: task.length,
+    index: task.length + 1,
   };
+
   task.push(obj);
   localStorage.setItem('task', JSON.stringify(task));
   domMN();
 });
 
+
 const removeTask = (index) => {
   const newArr = task.filter((element) => element.index !== index);
   task.length = 0;
-  let i = 0;
-  newArr.forEach((element) => {
-    element.index = i;
-    i += 1;
+  newArr.forEach((element, i) => {
+    element.index = i + 1;
   });
   task.push(...newArr);
   localStorage.setItem('task', JSON.stringify(task));
   domMN();
+
 };
 
 Container.addEventListener('click', (e) => {
   if (e.target.classList.contains('fa-solid')) {
     const index = parseInt(e.target.getAttribute('id'), 10);
     removeTask(index);
+   
   }
 });
 
 const update = (e) => {
-  const clicked = e.target.closest('.todo');
-
+  const clicked = e.target.closest('.edit-list');
   if (!clicked) return;
-  clicked.addEventListener('keyup', () => {
+  console.log(e.target);
+  clicked.addEventListener('keypress', () => {
     const task = JSON.parse(localStorage.getItem('task')) || [];
     const targetData = parseInt(clicked.getAttribute('data-desc'), 10);
 
@@ -75,6 +78,7 @@ const update = (e) => {
     localStorage.setItem('task', JSON.stringify(task));
   });
 };
+
 
 Container.addEventListener('click', update);
 
