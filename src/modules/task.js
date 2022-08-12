@@ -34,8 +34,9 @@ addBtn.addEventListener('click', (e) => {
   const obj = {
     description: input,
     completed: false,
-    index: task.length,
+    index: task.length + 1,
   };
+
   task.push(obj);
   localStorage.setItem('task', JSON.stringify(task));
   domMN();
@@ -44,10 +45,8 @@ addBtn.addEventListener('click', (e) => {
 const removeTask = (index) => {
   const newArr = task.filter((element) => element.index !== index);
   task.length = 0;
-  let i = 0;
-  newArr.forEach((element) => {
-    element.index = i;
-    i += 1;
+  newArr.forEach((element, i) => {
+    element.index = i + 1;
   });
   task.push(...newArr);
   localStorage.setItem('task', JSON.stringify(task));
@@ -62,10 +61,9 @@ Container.addEventListener('click', (e) => {
 });
 
 const update = (e) => {
-  const clicked = e.target.closest('.todo');
-
+  const clicked = e.target.closest('.edit-list');
   if (!clicked) return;
-  clicked.addEventListener('keyup', () => {
+  clicked.addEventListener('keypress', () => {
     const task = JSON.parse(localStorage.getItem('task')) || [];
     const targetData = parseInt(clicked.getAttribute('data-desc'), 10);
 
