@@ -22,5 +22,4 @@ export const clearAllTask = () => {
   });
   task.push(...newArr);
   localStorage.setItem('task', JSON.stringify(task));
-
 };
