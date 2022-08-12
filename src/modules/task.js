@@ -1,4 +1,3 @@
-import { remove } from 'lodash';
 import { clear, clearAllTask } from './clearcm.js';
 
 const addBtn = document.querySelector('.submit');
@@ -43,7 +42,6 @@ addBtn.addEventListener('click', (e) => {
   domMN();
 });
 
-
 const removeTask = (index) => {
   const newArr = task.filter((element) => element.index !== index);
   task.length = 0;
@@ -53,21 +51,18 @@ const removeTask = (index) => {
   task.push(...newArr);
   localStorage.setItem('task', JSON.stringify(task));
   domMN();
-
 };
 
 Container.addEventListener('click', (e) => {
   if (e.target.classList.contains('fa-solid')) {
     const index = parseInt(e.target.getAttribute('id'), 10);
     removeTask(index);
-   
   }
 });
 
 const update = (e) => {
   const clicked = e.target.closest('.edit-list');
   if (!clicked) return;
-  console.log(e.target);
   clicked.addEventListener('keypress', () => {
     const task = JSON.parse(localStorage.getItem('task')) || [];
     const targetData = parseInt(clicked.getAttribute('data-desc'), 10);
@@ -78,7 +73,6 @@ const update = (e) => {
     localStorage.setItem('task', JSON.stringify(task));
   });
 };
-
 
 Container.addEventListener('click', update);
 
