@@ -41,7 +41,7 @@ body {
   background: none;
 }
 
-.task-list {
+.check {
   padding: 0 10px;
   display: grid;
   grid-template-columns: 0.5fr 8fr 1fr;
@@ -52,7 +52,7 @@ body {
 }
 
 .input-check {
-  height: 50px;
+  height: 30px;
   border: 2px solid #bdbdbd;
 }
 
@@ -65,7 +65,7 @@ body {
   width: 100%;
 }
 
-.btn-clear {
+.clearall {
   background: #f6f6f6;
   border: none;
   width: 100%;
