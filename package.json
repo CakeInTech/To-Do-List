@@ -2,6 +2,7 @@
   "name": "webpack-demo",
   "version": "1.0.0",
   "description": "",
+ 
   "private": true,
   "scripts": {
     "start": "webpack-dev-server --open --config webpack.dev.js",
@@ -28,6 +29,7 @@
     "webpack-dev-server": "^4.9.3"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "sortablejs": "^1.15.0"
   }
 }
