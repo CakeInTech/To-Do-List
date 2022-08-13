@@ -31,6 +31,8 @@ clone the project by using terminal:
 ### setup
 - clone or download this repo on your machine.
 - Enter the project directory,
+- Run `npm install`,
+- Then run  `npm start` to check the live server
 
 ## Authors
 
