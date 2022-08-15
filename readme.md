@@ -14,7 +14,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo](#https://mohamedck.github.io/To-Do-List/dist/
+[Live Demo](https://mohamedck.github.io/To-Do-List/dist/)
 
 ## Getting Started
 
