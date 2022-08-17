@@ -59,6 +59,7 @@ body {
 .edit-list {
   border: none;
   padding: 12px;
+  outline: none;
 }
 
 .clear-container {
