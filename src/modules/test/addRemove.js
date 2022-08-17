@@ -8,7 +8,11 @@ function add(array, input) {
   }
   return array;
 }
+function removeTask(array, index) {
+  array.splice(index, 1);
+  return array;
+}
 
 module.exports = {
-  add,
+  add, removeTask,
 };
