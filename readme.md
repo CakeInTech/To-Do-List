@@ -42,6 +42,12 @@ clone the project by using terminal:
 - Twitter: [@MohamedCK](https://twitter.com/MohamedCK0)
 - LinkedIn: [@MohamedCK](https://www.linkedin.com/in/mohamed-abdulhakim-2868521b6/)
 
+
+👤 **Emem Ekpo**
+
+- GitHub: [@ecekpo](https://github.com/ecekpo)
+- Twitter: [@ecookey](https://twitter.com/ecekpo)
+- LinkedIn: [@ememekpo](https://www.linkedin.com/in/emem-ekpo-857135234/)
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
