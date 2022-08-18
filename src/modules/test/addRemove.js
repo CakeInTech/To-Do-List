@@ -8,11 +8,19 @@ function add(array, input) {
   }
   return array;
 }
+
 function removeTask(array, index) {
   array.splice(index, 1);
   return array;
 }
+function changeCheck(array, id, status) {
+  array[id].completed = status;
+  return array;
+}
+function clearChecked(array) {
+  return array.filter((task) => task.completed !== true);
+}
 
 module.exports = {
-  add, removeTask,
+  add, removeTask, changeCheck, clearChecked,
 };
