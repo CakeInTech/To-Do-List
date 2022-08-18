@@ -10,6 +10,14 @@ describe('add and remove', () => {
     expect(array).toHaveLength(2);
   });
 
+  // update
+  test('update test', () => {
+    array = taskStore.update(array, 0, 'test1');
+    expect(array[0].description).toBe('test1');
+    array = taskStore.update(array, 1, 'test2');
+    expect(array[1].description).toBe('test2');
+  });
+
   // remove
   test('remove test', () => {
     array = taskStore.removeTask(array, 1);

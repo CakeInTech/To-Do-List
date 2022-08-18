@@ -8,7 +8,12 @@ function add(array, input) {
   }
   return array;
 }
-
+function update(array, index, value) {
+  if (value !== '') {
+    array[index] = { description: value, completed: false };
+  }
+  return array;
+}
 function removeTask(array, index) {
   array.splice(index, 1);
   return array;
@@ -22,5 +27,5 @@ function clearChecked(array) {
 }
 
 module.exports = {
-  add, removeTask, changeCheck, clearChecked,
+  add, update, removeTask, changeCheck, clearChecked,
 };
