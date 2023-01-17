@@ -2,7 +2,7 @@
 
 # To-Do List;
 
-> In this project, we built a basic website that allows users to add/remove books from a list.We achieved that by using JavaScript objects and arrays.we also dynamically modified the DOM and add basic events.
+> Experience a user-friendly and efficient task management app that I developed. The app allows you to input tasks and automatically clears them once completed. It also features a convenient drag-and-drop functionality, making it easy to organize and prioritize your tasks. This interactive app streamlines your productivity.
 
 
 ## Built With
